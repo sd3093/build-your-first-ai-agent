@@ -16,3 +16,6 @@ output/*
 # OS / editor
 .DS_Store
 .ipynb_checkpoints/
+
+# Instructor-only — keep the answer key OUT of learners' forks (stays local for you)
+solutions/
