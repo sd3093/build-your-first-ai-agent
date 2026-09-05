@@ -35,7 +35,7 @@ researcher = Agent(
         "When you are unsure, you search the web before answering."
     ),
     tools=[DuckDuckGoSearchTool(max_results=5)],
-    llm=LLM(model="gemini/gemini-2.5-flash", temperature=0.3),
+    llm=LLM(model="gemini/gemini-3.6-flash", temperature=0.3),
     verbose=True,  # so you can WATCH it think and decide to search
 )
 

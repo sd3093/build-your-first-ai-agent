@@ -40,8 +40,8 @@ if st.button("Run Optimist + Skeptic", type="primary"):
     else:
         try:
             with st.spinner("Two agents are researching and debating… (about 1–2 minutes)"):
-                optimist = build_optimist("gemini/gemini-2.5-flash", 0.6, 6)
-                skeptic = build_skeptic("gemini/gemini-2.5-flash", 0.6, 6)
+                optimist = build_optimist("gemini/gemini-3.6-flash", 0.6, 6)
+                skeptic = build_skeptic("gemini/gemini-3.6-flash", 0.6, 6)
                 bull = build_bull_task(optimist, idea.strip(), "", "", "")
                 bear = build_bear_task(skeptic, idea.strip(), "", "", "")
                 crew = Crew(

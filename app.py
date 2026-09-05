@@ -136,9 +136,7 @@ with st.sidebar:
     model = st.selectbox(
         "LLM",
         options=[
-            "gemini/gemini-2.5-flash",
-            "gemini/gemini-2.5-flash-lite",
-            "gemini/gemini-2.5-pro",
+            "gemini/gemini-3.6-flash",
         ],
         index=0,
         help="Gemini models via Google AI Studio. Flash is fast + free tier friendly.",
