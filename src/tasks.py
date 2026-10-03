@@ -74,8 +74,49 @@ def build_bear_task(
     The app stays paused until you replace every "TODO".  See README → Lab 2.
     """
     # 🔨 Lab 2: write your own description + expected_output. (Removing every "TODO" unlocks the app.)
-    description = "TODO"
-    expected_output = "TODO"
+    description = (
+        f"Build the strongest evidence-backed BEAR CASE for this startup idea.\n\n"
+        f"{_idea_block(idea, customer, advantage, budget)}\n\n"
+        f"Use the search and scrape tools to research:\n"
+        f"1. Evidence that the reachable market is smaller, slower-growing, or harder to "
+        f"access than claimed. Challenge top-down market estimates with bottom-up proxies.\n"
+        f"2. Evidence of weak or unmet customer demand, low willingness to pay, poor "
+        f"retention, or strong existing alternatives from forums, reviews, and search trends.\n"
+        f"3. Competitive and differentiation risks, including incumbent advantages, crowded "
+        f"categories, low switching costs, and easily copied features.\n"
+        f"4. Business-model and unit-economics risks. Quantify pricing, CAC, churn, gross "
+        f"margin, payback period, capital requirements, and runway where evidence permits.\n"
+        f"5. Comparable failures from adjacent markets, including shutdowns, down rounds, "
+        f"failed acquisitions, pivots, and investor pullback during the last 18 months.\n"
+        f"6. Technical, regulatory, demographic, cultural, distribution, and execution "
+        f"headwinds that could make now the wrong time or prevent the idea from scaling.\n"
+        f"7. Evidence that contradicts the bear case, so credible strengths are not ignored.\n\n"
+        f"Prioritize recent primary sources, then reputable secondary sources. For each "
+        f"material claim, provide a URL and publication date and label the evidence "
+        f"`Verified`, `Inferred`, or `Unknown`. Rank each major risk by likelihood and "
+        f"impact on a 1-5 scale. If evidence is weak, conflicting, or unavailable, state "
+        f"what is unknown, why it matters, and the cheapest test that could resolve it. "
+        f"Do not fabricate evidence or present estimates as facts."
+    )
+    expected_output = (
+        "A structured Markdown brief titled `# 🔪 Bear Case` with these sections:\n"
+        "- **Executive Verdict** (3-5 sentences summarizing the case against the idea)\n"
+        "- **Critical Assumptions** (table: assumption, evidence, evidence status, consequence)\n"
+        "- **Top Failure Risks** (5-7 risks ranked by likelihood and impact from 1-5, "
+        "with evidence and source links)\n"
+        "- **Demand and Market Weakness** (reachable-market and willingness-to-pay evidence)\n"
+        "- **Competition and Differentiation Risks** (incumbents, alternatives, switching "
+        "costs, and defensibility)\n"
+        "- **Unit Economics and Funding Risks** (available CAC, churn, margin, payback, "
+        "capital, and runway evidence; mark unavailable metrics `Unknown`)\n"
+        "- **Comparable Failures** (shutdowns, down rounds, failed acquisitions, or pivots)\n"
+        "- **Headwinds** (technical, regulatory, demographic, cultural, distribution, "
+        "and execution barriers)\n"
+        "- **Evidence Against the Bear Case** (credible strengths or contradictory findings)\n"
+        "- **Unknowns and Validation Tests** (missing evidence, why it matters, and the "
+        "cheapest test for each unknown)\n"
+        "- **Sources** (numbered URLs with source name and publication date)"
+    )
 
     todo_guard(
         description, expected_output,

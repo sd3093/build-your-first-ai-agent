@@ -44,7 +44,7 @@ def build_crew(
     #    The memo task needs BOTH earlier tasks as its `context`, so the Strategist
     #    can read what the Optimist and Skeptic found.
     #    👉 Replace the empty list  []  with  [bull_task, bear_task]  on the next line.
-    memo_context = []  # ← TODO (Lab 3): change [] to [bull_task, bear_task]
+    memo_context = [bull_task, bear_task]  # ← TODO (Lab 3): change [] to [bull_task, bear_task]
     fan_in_guard(
         memo_context,
         message=(
